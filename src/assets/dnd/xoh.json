@@ -1,0 +1,173 @@
+{
+    "characteristics": {
+        "alignment": "chaotic good",
+        "size": "medium",
+        "faith": ""
+    },
+    "persona": [
+        {
+            "name": "papa kap",
+            "gender": "m",
+            "eyes": "blue",
+            "hair": "orange, gray",
+            "skin": "white, flushed",
+            "age": "272",
+            "height": "4' 6\"",
+            "weight": "203 lbs."
+        },
+        {
+            "name": "zazz",
+            "gender": "m",
+            "eyes": "dark green",
+            "hair": "bald",
+            "skin": "white",
+            "age": "21",
+            "height": "5' 8\"",
+            "weight": "163 lbs."
+        },
+        {
+            "name": "gob",
+            "gender": "m",
+            "eyes": "yellow",
+            "hair": "black",
+            "skin": "red-orange",
+            "age": "33",
+            "height": "5' 0\"",
+            "weight": "153 lbs."
+        },
+        {
+            "name": "???",
+            "gender": "f",
+            "eyes": "white",
+            "hair": "white",
+            "skin": "pale",
+            "age": "18",
+            "height": "5' 7\"",
+            "weight": "123 lbs."
+        }
+    ],
+    "personality": {
+        "trait": "I judge people by their actions, not their words.",
+        "ideal": "Fairness. No one should get preferential treatment before the law, and no one is above the law. (Lawful)",
+        "bond": "I protect those who cannot protect themselves.",
+        "flaw": "I’m convinced of the significance of my destiny, and blind to my shortcomings and the risk of failure."
+    },
+    "level": {
+        "monk": {
+            "level": 8,
+            "subclass": "Way of the Open Hand",
+            "primary": true
+        },
+        "warlock": {
+            "level": 2,
+            "subclass": "The Celestial"
+        }
+    },
+    "ability": {
+        "str": 7,
+        "dex": 20,
+        "con": 14,
+        "int": 8,
+        "wis": 14,
+        "cha": 14
+    },
+    "background": "folk hero",
+    "class": {
+        "monk": [],
+        "warlock": []
+    },
+    "feat": ["chef"],
+    "proficiencies": [
+        { "type": "tool", "source": "class", "value": "carpenter's tools" },
+        { "type": "tool", "source": "racial", "value": "cook's utensils" },
+        { "type": "tool", "source": "feat", "value": "cook's utensils" },
+        { "type": "tool", "source": "background", "value": "smith's tools" },
+        { "type": "tool", "source": "background", "value": "vehicles (land)" },
+        { "type": "language", "source": "racial", "value": "common" },
+        { "type": "language", "source": "racial", "value": "dwarvish" },
+        { "type": "language", "source": "racial", "value": "undercommon" }
+    ],
+    "racial": {
+        "changeling": []
+    },
+    "skill": [
+        "acrobatics",
+        "animal handling",
+        "athletics",
+        "insight",
+        "persuasion",
+        "survival"
+    ],
+    "spell": [
+        "mod": 2,
+        "attack": 6,
+        "save dc": 14,
+        "0": {
+            "list": [
+                { "name": "eldritch blast", "tags": [ "papa kap", "zazz" ] },
+                { "name": "minor illusion", "tags": [ "papa kap", "zazz" ] },
+                { "name": "sacred flame", "tags": [] },
+                { "name": "light", "tags": [ "zazz" ] }
+            ]
+        },
+        "1": {
+            "slots": 2,
+            "list": [
+                { "name": "hex", "tags": [ "papa kap" ] },
+                { "name": "healing elixir", "tags": [ "zazz" ] },
+                { "name": "cure wounds", "tags": [] }
+            ]
+        }
+    ],
+    "equipment": {
+        "bag": "large backpack (leather, 60lb capacity)",
+        "clue pocket": [
+            "dusty 300 ml flask full of black hair from kalabash's room",
+            "90 gold/ 30 silver in coin purse (clue)",
+            "corked clear glass container (clue)",
+            "vial of ink & quill & 17 sheets of fine parchment (clue)",
+            "note - \"suspects for the murder of crissann: willow, ball of light, giant bees\"",
+            "note - \"suspects for death of murzah: sword, faemaar?\"",
+            "six 2x3 scrolls with images of warriors (4) & horses (2)"
+        ],
+        "clothes pocket": [
+            "deerstalker hat",
+            "pipe",
+            "travelers robes",
+            "black robes (equipped)"
+        ],
+        "book pocket": [
+            "horse care x2",
+            "mushroom encyclopedia"
+        ],
+        "food pocket": [
+            ".5 lbs dried garlic"
+        ],
+        "potions pocket": [
+            "2 green vials from otto's castle - vial of magical poison",
+            "empty health potion bottle",
+            "1 potion of greater healing",
+            "1 light blue potion (may be cat's grace)"
+        ],
+        "tools pocket": [
+            "mortar pestle",
+            "spear",
+            "chisel",
+            "1 lb silver flatware",
+            "candle holder",
+            "9 small brittle bones",
+        "weapons pocket": [
+            "brass knuckles that make every other attack, (odds) deal magic/radiant damage, (evens) deal magic/psychic damage"
+        ],
+        "magic items pocket": [
+            "weird doll - give it a personal item to scry, must know scry, multiuse",
+            "monkey's paw - 2 casts of wish w/ evil twists, 2 with just the twist no wish",
+            "skeleton whistle"
+        ],
+        "money pocket": {
+            "pp": 506,
+            "sp": 210,
+            "cp": 7
+        }
+    }
+}
