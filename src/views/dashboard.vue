@@ -2,7 +2,7 @@
     <el-row :gutter="16" class="dashboard">
         <!-- Nori & MochApi -->
         <el-col :xs="24" :sm="8" :md="8" :xl="8">
-            <el-card class="full-card">
+            <el-card class="full-card nori">
                 <div class="card-header nori">
                     <div class="icon-container">
                         <div class="icon-square">
@@ -20,7 +20,7 @@
                         <span>Links</span>
                         <div></div>
                     </div>
-                    <el-button @click="navigate('mochapi')" class="nori-btn">
+                    <el-button @click="navigate('mochapi/')" class="nori-btn">
                         MochApi Documentation
                     </el-button>
                     <el-button @click="navigate('mochibux')" class="nori-btn">
@@ -31,7 +31,7 @@
         </el-col>
         <!-- Grimbi's Grimiore -->
         <el-col :xs="24" :sm="8" :md="8" :xl="8">
-            <el-card class="full-card">
+            <el-card class="full-card grim">
                 <div class="card-header grim">
                     <div class="icon-container">
                         <div class="icon-square">
@@ -60,7 +60,7 @@
         </el-col>
         <!-- Fireball Chair -->
         <el-col :xs="24" :sm="8" :md="8" :xl="8">
-            <el-card class="full-card">
+            <el-card class="full-card chair">
                 <div class="card-header chair">
                     <div class="icon-container">
                         <div class="icon-square">
@@ -114,7 +114,11 @@ export default {
     },
     methods: {
         navigate(loc) {
-            window.location.href = `/${loc}`;
+            if (loc === 'mochibux') {
+                router.push(loc);
+            } else {
+                window.location.href = `/${loc}`;
+            }
         }
     }
 }
@@ -139,8 +143,20 @@ export default {
 
     .full-card,
     .half-card {
-        background-color: rgba($primary-light, 0.3);
-        border-color: rgba($primary-light, 0.4);
+        &.nori {
+            background-color: rgba($primary-light, 0.3);
+            border-color: rgba($primary-light, 0.4);
+        }
+
+        &.grim {
+            background-color: rgba($secondary-light, 0.3);
+            border-color: rgba($secondary-light, 0.4);
+        }
+
+        &.chair {
+            background-color: rgba($ternary-light, 0.3);
+            border-color: rgba($ternary-light, 0.4);
+        }
 
         .card-header {
             display: flex;
