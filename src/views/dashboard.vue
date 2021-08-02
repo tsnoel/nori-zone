@@ -115,7 +115,7 @@ export default {
     methods: {
         navigate(loc) {
             if (loc === 'mochibux') {
-                router.push(loc);
+                this.$router.push(loc);
             } else {
                 window.location.href = `/${loc}`;
             }
