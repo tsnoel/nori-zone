@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "element-plus": "^1.0.2-beta.43",
-    "oh-vue-icons": "^0.4.3",
-    "sass": "^1.32.12",
+    "element-plus": "^1.0.2-beta.45",
+    "oh-vue-icons": "^0.4.6",
+    "sass": "^1.34.0",
     "sass-loader": "^10",
     "vue": "^3.0.0",
     "vue-router": "^4.0.6"

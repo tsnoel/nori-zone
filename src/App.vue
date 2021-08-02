@@ -1,29 +1,7 @@
 <template>
-    <!-- Header -->
-    <component :is="Nav"/>
-
-    <div class="main-pane">
-        <!-- Navigation Bar -->
-        <el-menu
-            class="main-menu"
-            :default-active="$route.path"
-            :router="true"
-            @mouseover="isCollapse = false"
-            @mouseleave="isCollapse = true"
-            :collapse="isCollapse">
-            <el-menu-item index="/">
-                <v-icon class="menu-icon" scale="1.5" name="md-dashboard-round" />
-                <template #title>Dashboard</template>
-            </el-menu-item>
-            <el-menu-item index="/character">
-                <v-icon class="menu-icon" scale="1.5" name="fa-dice-d20" />
-                <template #title>Character Sheet</template>
-            </el-menu-item>
-            <el-menu-item index="/mochibux">
-                <v-icon class="menu-icon" scale="1.5" name="gi-podium" />
-                <template #title>Mochibux Ranking</template>
-            </el-menu-item>
-        </el-menu>
+    <div class="app-container">
+        <!-- Header -->
+        <component :is="Nav"/>
 
         <!-- Current Page -->
         <router-view />
@@ -33,26 +11,12 @@
 <script>
 import Nav from './components/Nav';
 import { shallowRef } from 'vue';
-import {
-    ElMenu,
-    ElMenuItem,
-    ElMenuItemGroup,
-    ElSubmenu
-} from 'element-plus';
-import './styles/element-variables.scss';
 
 export default {
     name: 'App',
-    components: {
-        'el-menu': ElMenu,
-        'el-menu-item': ElMenuItem,
-        'el-menu-item-group': ElMenuItemGroup,
-        'el-submenu': ElSubmenu
-    },
     data() {
         return {
-            Nav: shallowRef(Nav),
-            isCollapse: true
+            Nav: shallowRef(Nav)
         };
     }
 }
@@ -61,19 +25,17 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto&display=swap');
 
-html {
+html,
+body,
+#app,
+.app-container {
     height: 100%;
 }
 
 body {
     background-color: $base-color;
     font-family: 'Poppins', sans-serif;
-    height: 100%;
     margin: 0;
-
-    #app {
-        height: 100%;
-    }
 
     button, 
     input, 

@@ -1,20 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
-import OhVueIcon from 'oh-vue-icons/dist/v3/icon.es';
 
-import {
-    GiPodium,
-    FaDiceD20,
-    FaMedal,
-    MdDashboardRound
-} from 'oh-vue-icons/icons';
+import 'element-plus/lib/theme-chalk/index.css';
 
-OhVueIcon.add(
-    GiPodium,
-    FaDiceD20,
-    FaMedal,
-    MdDashboardRound
-);
-
-createApp(App).component('v-icon', OhVueIcon).use(router).mount('#app');
+createApp(App).use(router).mount('#app');

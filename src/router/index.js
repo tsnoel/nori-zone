@@ -1,9 +1,7 @@
 import { createWebHistory, createRouter } from 'vue-router';
-// import login from '@/views/login.vue';
+
 import dashboard from '@/views/dashboard.vue';
-import character from '@/views/character.vue';
 import mochibux from '@/views/mochibux.vue';
-import notfound from '@/views/notfound.vue';
 
 const routes = [
   {
@@ -12,19 +10,9 @@ const routes = [
     component: dashboard
   },
   {
-    path: '/character',
-    name: 'Character Sheet',
-    component: character
-  },
-  {
     path: '/mochibux',
     name: 'MochiBux Ranking',
     component: mochibux
-  },
-  {
-    path: '/:pathMatch(.*)*',
-    name: '404',
-    component: notfound
   }
 ];
 
