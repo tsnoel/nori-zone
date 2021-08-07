@@ -127,7 +127,8 @@ export default {
 <style scoped lang="scss">
 .dashboard {
     height: calc(100% - 2.5rem);
-    padding: 1rem 1rem 0 1rem;
+    margin: 0 !important;
+    padding: 1rem 0.5rem 0 0.5rem;
 
     .full-card {
         height: calc(100% - 1rem);
