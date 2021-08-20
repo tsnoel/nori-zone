@@ -23,7 +23,7 @@
                     <el-button @click="navigate('mochapi/')" class="nori-btn">
                         MochApi Documentation
                     </el-button>
-                    <el-button @click="navigate('mochibux')" class="nori-btn">
+                    <el-button @click="navigate('#/mochibux')" class="nori-btn">
                         MochiBux Leaderboard
                     </el-button>
                 </div>
@@ -50,6 +50,10 @@
                     </div>
                     <el-button @click="navigate('grimoire/#/')" class="grim-btn">
                         Spell Cards
+                    </el-button>
+                    <el-button @click="navigate('grimoire/#/items')"
+                        class="grim-btn">
+                        Magic Item Gashapon
                     </el-button>
                     <el-button @click="navigate('grimoire/#/character-sheet')"
                         class="grim-btn">
