@@ -35,7 +35,7 @@
                 <div class="card-header grim">
                     <div class="icon-container">
                         <div class="icon-square">
-                            <img class="grim-icon" src="../assets/frog.png">
+                            <grimbi-icon class="logo-icon grimbi-icon"/>
                         </div>
                     </div>
                     <span class="logo-text">Grimbi's</span>
@@ -97,11 +97,13 @@ import {
     ElRow
 } from 'element-plus';
 
+import GrimbiIcon from '../assets/grimbi';
 import NoriIcon from '../assets/nori';
 
 export default {
     name: 'dashboard',
     components: {
+        'grimbi-icon': GrimbiIcon,
         [ElButton.name]: ElButton,
         [ElCard.name]: ElCard,
         [ElCol.name]: ElCol,
@@ -145,18 +147,18 @@ export default {
     .full-card,
     .half-card {
         &.nori {
-            background-color: rgba($primary-light, 0.3);
-            border-color: rgba($primary-light, 0.4);
+            background-color: rgba(color(purple, lightdash), 0.3);
+            border-color: rgba(color(purple, lightdash), 0.4);
         }
 
         &.grim {
-            background-color: rgba($secondary-light, 0.3);
-            border-color: rgba($secondary-light, 0.4);
+            background-color: rgba(color(green, lightdash), 0.3);
+            border-color: rgba(color(green, lightdash), 0.4);
         }
 
         &.chair {
-            background-color: rgba($ternary-light, 0.3);
-            border-color: rgba($ternary-light, 0.4);
+            background-color: rgba(color(redorange, lightdash), 0.3);
+            border-color: rgba(color(redorange, lightdash), 0.4);
         }
 
         .card-header {
@@ -174,18 +176,18 @@ export default {
             }
 
             .logo-sub-text {
-                color: $white;
+                color: color(white);
                 margin: -1.5rem 0 2rem 0;
             }
 
             &.nori {
                 .logo-text {
-                    color: $primary-light;
+                    color: color(purple, lightdash);
                     font-size: 5rem;
                 }
 
                 .icon-square {
-                    background-color: $primary-dark;
+                    background-color: color(purple, darkdash);
                 }
             }
 
@@ -196,28 +198,28 @@ export default {
                 }
 
                 .logo-text-2 {
-                    color: $white;
+                    color: color(white);
                     margin-bottom: 1rem;
                 }
             }
 
             &.chair {
                 .logo-text {
-                    color: $ternary-light;
+                    color: color(redorange, lightdash);
                 }
 
                 .icon-square {
-                    background-color: $ternary-dark;
+                    background-color: color(redorange, darkdash);
                 }
             }
 
             &.grim {
                 .logo-text {
-                    color: $secondary-light;
+                    color: color(green, lightdash);
                 }
 
                 .icon-square {
-                    background-color: $secondary-dark;
+                    background-color: color(green, darkdash);
                 }
             }
         }
@@ -231,13 +233,13 @@ export default {
                 flex-direction: row;
 
                 div {
-                    border-top: 1px solid #FFFFFF;
+                    border-top: 1px solid color(white);
                     margin-top: 0.8rem;
                     width: 35%;
                 }
 
                 span {
-                    color: $white;
+                    color: color(white);
                     text-align: center;
                     width: 30%;
                 }
@@ -259,28 +261,25 @@ export default {
             width: 100%;
 
             .icon-square {
-                height: 1.75rem;
-                transform: scale(5);
-                width: 1.5rem;
+                height: 8.75rem;
+                width: 7.5rem;
 
                 .chair-icon {
-                    height: 1.9rem;
-                    margin: 0.1rem 0 0 -0.1rem;
-                    width: 1.75rem;
-                }
-
-                .grim-icon {
-                    height: 2.5rem;
-                    margin: -0.25rem 0 0 -0.45rem;
-                    width: 2.4rem;
+                    height: 9.5rem;
+                    margin: 0.5rem 0 0 -0.6rem;
+                    width: 8.75rem;
                 }
             }
 
             .logo-icon {
-                fill: $white;
-                height: 2.5rem;
-                margin: -0.1rem 0 0 -0.45rem;
-                width: 2.5rem;
+                fill: color(white);
+                height: 12.5rem;
+                margin: -0.5rem 0 0 -2.25rem;
+                width: 12.5rem;
+
+                &.grimbi-icon {
+                    margin: -1.5rem 0 0 -2.55rem;
+                }
             }
         }
     }

@@ -55,32 +55,32 @@ export default {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    color: $primary-text;
+    color: color(purple, text);
 
     .entry {
         margin: 1rem;
         width: 8rem;
-        background-color: rgba($primary-light, 0.25);
+        background-color: rgba(color(purple, lightdash), 0.25);
         border-radius: 1rem;
-        box-shadow: 0 0 0.25rem rgba($primary, 0.4);
+        box-shadow: 0 0 0.25rem rgba(color(purple, dashboard), 0.4);
 
         &.you {
-            border: 0.2rem solid $secondary-light;
+            border: 0.2rem solid color(green, lightdash);
         }
 
         &:nth-child(1) {
-            background-color: rgba($gold, 0.4);
+            background-color: rgba(color(yellow, darker), 0.4);
         }
         &:nth-child(2) {
-            background-color: rgba($silver, 0.4);
+            background-color: rgba(color(charcoal, 300), 0.4);
         }
         &:nth-child(3) {
-            background-color: rgba($bronze, 0.4);
+            background-color: rgba(color(brown, 200), 0.4);
         }
         &:nth-child(2n) {
             .no-avatar {
-                color: $secondary-text;
-                background-color: $secondary;
+                color: color(green, text);
+                background-color: color(green, dashboard);
             }
         }
 
@@ -102,8 +102,8 @@ export default {
                 height: 3.75rem;
                 font-size: 2.5rem;
                 text-align: center;
-                color: $primary-text;
-                background-color: $primary;
+                color: color(purple, text);
+                background-color: color(purple, dashboard);
                 width: 50%;
                 border-radius: 1rem;
             }

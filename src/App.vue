@@ -33,7 +33,7 @@ body,
 }
 
 body {
-    background-color: $base-color;
+    background-color: color(charcoal, dark);
     font-family: 'Poppins', sans-serif;
     margin: 0;
 
@@ -53,24 +53,24 @@ body {
         height: calc(100% - 4rem);
 
         .main-menu {
-            background-color: rgba($primary, 0.25);
+            background-color: rgba(color(purple, dashboard), 0.25);
             border: 0;
-            color: $primary-text;
+            color: color(purple, text);
 
             &.el-menu--collapse {
                 min-width: 4rem;
             }
 
             .el-menu-item {
-                color: $primary-text;
+                color: color(purple, text);
 
                 &.is-active {
-                    color: $secondary;
-                    background-color: rgba($primary, 0.25);
+                    color: color(green, dashboard);
+                    background-color: rgba(color(purple, dashboard), 0.25);
                 }
 
                 &:hover {
-                    background-color: rgba($primary, 0.5);
+                    background-color: rgba(color(purple, dashboard), 0.5);
                 }
 
                 .menu-icon {

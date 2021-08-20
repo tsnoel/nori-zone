@@ -33,13 +33,13 @@ export default {
 
 <style scoped lang="scss">
 .nav-header {
-    background-color: rgba($primary, 0.25);
+    background-color: rgba(color(purple, darkdash), 0.4);
     display: flex;
     flex-direction: row;
     height: 2.5rem;
 
     .logo-container {
-        color: $white;
+        color: color(white);
         display: flex;
         flex-direction: row;
 
@@ -51,13 +51,13 @@ export default {
             width: 2.75rem;
 
             .icon-square {
-                background-color: $primary-dark;
+                background-color: color(purple, darkdash);
                 height: 1.75rem;
                 width: 1.5rem;
             }
 
             .logo-icon {
-                fill: $white;
+                fill: color(white);
                 height: 2.5rem;
                 margin: -0.1rem 0 0 -0.45rem;
                 width: 2.5rem;
@@ -70,7 +70,7 @@ export default {
         }
 
         .page-text {
-            border-left: 2px solid $primary;
+            border-left: 2px solid color(purple, dashboard);
             font-size: 1rem;
             margin: 0.6rem 0.5rem;
             padding: 0 0.5rem;

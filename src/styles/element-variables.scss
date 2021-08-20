@@ -1,8 +1,0 @@
-@import './colors.scss';
-
-/* theme color */
-$--color-primary: $secondary;
-
-/* icon font path, required */
-$--font-path: '~element-plus/lib/theme-chalk/fonts';
-@import '~element-plus/packages/theme-chalk/src/index';
