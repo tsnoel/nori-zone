@@ -1,13 +1,13 @@
 <template>
     <div class="nav-header">
         <span class="logo-container">
-            <div class="icon-container">
+            <div class="icon-container" @click="navigate">
                 <div class="icon-square">
                     <nori-icon class="logo-icon"/>
                 </div>
             </div>
-            <span class="logo-text">nori</span>
-            <!--span class="page-text">{{page}}</span-->
+            <span class="logo-text" @click="navigate">nori</span>
+            <span v-if="page" class="page-text">{{page}}</span>
         </span>
     </div>
 </template>
@@ -20,13 +20,13 @@ export default {
     components: {
         'nori-icon': NoriIcon
     },
-    data() {
-        return {
-            page: ''
-        };
+    props: {
+        page: String
     },
-    beforeMount() {
-        this.page = this.$router.currentRoute.value.name || 'Dashboard';
+    methods: {
+        navigate() {
+            this.$router.push('/');
+        }
     }
 }
 </script>
@@ -44,6 +44,7 @@ export default {
         flex-direction: row;
 
         .icon-container {
+            cursor: pointer;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -65,15 +66,16 @@ export default {
         }
 
         .logo-text {
+            cursor: pointer;
             font-size: 1.5rem;
             margin: 0.2rem 0;
         }
 
         .page-text {
             border-left: 2px solid color(purple, dashboard);
-            font-size: 1rem;
-            margin: 0.6rem 0.5rem;
-            padding: 0 0.5rem;
+            font-size: 0.8rem;
+            margin: 0.7rem 0.5rem;
+            padding: 0.05rem 0.5rem;
         }
     }
 }

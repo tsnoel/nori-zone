@@ -1,4 +1,5 @@
 <template>
+    <nav-header page="Dashboard"/>
     <el-row :gutter="16" class="dashboard">
         <!-- Nori & MochApi -->
         <el-col :xs="24" :sm="8" :md="8" :xl="8">
@@ -11,7 +12,7 @@
                     </div>
                     <span class="logo-text">nori</span>
                     <span class="logo-sub-text">
-                        Home Server Dashboard & Greggbot Utilities
+                        Project Dashboard
                     </span>
                 </div>
                 <div class="btn-group">
@@ -20,7 +21,7 @@
                         <span>Links</span>
                         <div></div>
                     </div>
-                    <el-button @click="navigate('mochapi/')" class="nori-btn">
+                    <el-button @click="navigate('#/mochapi')" class="nori-btn">
                         MochApi Documentation
                     </el-button>
                     <el-button @click="navigate('#/mochibux')" class="nori-btn">
@@ -101,6 +102,7 @@ import {
     ElRow
 } from 'element-plus';
 
+import Nav from '../components/nav';
 import GrimbiIcon from '../assets/grimbi';
 import NoriIcon from '../assets/nori';
 
@@ -112,6 +114,7 @@ export default {
         [ElCard.name]: ElCard,
         [ElCol.name]: ElCol,
         [ElRow.name]: ElRow,
+        [Nav.name]: Nav,
         'nori-icon': NoriIcon
     },
     data() {
@@ -120,11 +123,7 @@ export default {
     },
     methods: {
         navigate(loc) {
-            if (loc === 'mochibux') {
-                this.$router.push(loc);
-            } else {
-                window.location.href = `/${loc}`;
-            }
+            window.location.href = `/${loc}`;
         }
     }
 }
@@ -168,7 +167,7 @@ export default {
         .card-header {
             display: flex;
             flex-direction: column;
-            min-height: 20rem;
+            min-height: 22rem;
             text-align: center;
 
             .logo-text {
@@ -204,6 +203,10 @@ export default {
                 .logo-text-2 {
                     color: color(white);
                     margin-bottom: 1rem;
+                }
+
+                .logo-sub-text {
+                    margin-bottom: 0.45rem;
                 }
             }
 
@@ -261,7 +264,7 @@ export default {
             display: flex;
             flex-direction: row;
             justify-content: center;
-            margin: 3rem 0;
+            margin: 1rem 0;
             width: 100%;
 
             .icon-square {
