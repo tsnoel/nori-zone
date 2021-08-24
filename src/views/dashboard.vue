@@ -69,7 +69,7 @@
                 <div class="card-header chair">
                     <div class="icon-container">
                         <div class="icon-square">
-                            <img class="chair-icon" src="../assets/chair.png">
+                            <chair-icon class="logo-icon chair-icon"/>
                         </div>
                     </div>
                     <span class="logo-text">Fireball</span>
@@ -103,12 +103,14 @@ import {
 } from 'element-plus';
 
 import Nav from '../components/nav';
+import ChairIcon from '../assets/fbchair';
 import GrimbiIcon from '../assets/grimbi';
 import NoriIcon from '../assets/nori';
 
 export default {
     name: 'dashboard',
     components: {
+        'chair-icon': ChairIcon,
         'grimbi-icon': GrimbiIcon,
         [ElButton.name]: ElButton,
         [ElCard.name]: ElCard,
@@ -270,12 +272,6 @@ export default {
             .icon-square {
                 height: 8.75rem;
                 width: 7.5rem;
-
-                .chair-icon {
-                    height: 9.5rem;
-                    margin: 0.5rem 0 0 -0.6rem;
-                    width: 8.75rem;
-                }
             }
 
             .logo-icon {
@@ -283,6 +279,10 @@ export default {
                 height: 12.5rem;
                 margin: -0.5rem 0 0 -2.25rem;
                 width: 12.5rem;
+
+                &.chair-icon {
+                    margin: -0.75rem 0 0 -2rem;
+                }
 
                 &.grimbi-icon {
                     margin: -1.5rem 0 0 -2.55rem;

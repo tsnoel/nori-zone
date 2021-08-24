@@ -1,6 +1,8 @@
 <template>
     <nav-header page="MochApi Documentation"/>
-    <iframe class="documentation-container" :src="source"></iframe>
+    <div class="documentation-container">
+        <iframe :src="source"></iframe>
+    </div>
 </template>
 
 <script>
@@ -21,12 +23,16 @@ export default {
 
 <style scoped lang="scss">
 .documentation-container {
-    background-color: rgba(color(purple, lightdash), 0.8);
-    border: 1px solid rgba(color(purple, lightdash), 0.6);
-    border-radius: 1rem;
-    height: calc(94% - 4.5rem);
-    margin: 3%;
-    overflow: scroll;
-    width: calc(94% - 0.25rem);
+    background-color: color(white);
+    height: calc(100% - 2.5rem);
+    overflow: hidden;
+    width: 100%;
+
+    iframe {
+        background-color: rgba(color(purple, lightdash), 0.7);
+        border: 0;
+        height: 100%;
+        width: 100%;
+    }
 }
 </style>
